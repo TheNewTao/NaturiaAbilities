@@ -1,8 +1,0 @@
-name: Naturia
-description: a plugin
-version: 1.0
-author: TheNewTao
-main: me.velocityteam.core.Main
-commands:
-  ability:
-  select:

@@ -3,14 +3,13 @@ package me.velocityteam.menus;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class AbilitySelector {
-	public Inventory openAbilitySelector(Player p) {
-		Inventory inv = Bukkit.createInventory(p, 27,
+	public Inventory openAbilitySelector() {
+		Inventory inv = Bukkit.createInventory(null, 27,
 				ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Select your Ability Type");
 
 		ItemStack pane = new ItemStack(Material.STAINED_GLASS_PANE, 1);
@@ -23,22 +22,22 @@ public class AbilitySelector {
 		waterMeta.setDisplayName(ChatColor.BLUE + ChatColor.BOLD.toString() + "Water Abilities");
 		water.setItemMeta(waterMeta);
 
-		ItemStack fire = new ItemStack(Material.BLAZE_POWDER, 1);
+		ItemStack fire = new ItemStack(Material.FIRE, 1);
 		ItemMeta fireMeta = fire.getItemMeta();
 		fireMeta.setDisplayName(ChatColor.RED + ChatColor.BOLD.toString() + "Fire Abilities");
 		fire.setItemMeta(fireMeta);
 
-		ItemStack lighting = new ItemStack(Material.FLINT_AND_STEEL, 1);
+		ItemStack lighting = new ItemStack(Material.BLAZE_ROD, 1);
 		ItemMeta lightingMeta = lighting.getItemMeta();
 		lightingMeta.setDisplayName(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Lighting Abilities");
 		lighting.setItemMeta(lightingMeta);
 
-		ItemStack dark = new ItemStack(Material.EYE_OF_ENDER, 1);
+		ItemStack dark = new ItemStack(Material.SOUL_SAND, 1);
 		ItemMeta darkMeta = dark.getItemMeta();
 		darkMeta.setDisplayName(ChatColor.DARK_PURPLE + ChatColor.BOLD.toString() + "Dark Abilities");
 		dark.setItemMeta(darkMeta);
 
-		ItemStack martial = new ItemStack(Material.ARROW, 1);
+		ItemStack martial = new ItemStack(Material.IRON_SWORD, 1);
 		ItemMeta martialMeta = martial.getItemMeta();
 		martialMeta.setDisplayName(ChatColor.WHITE + ChatColor.BOLD.toString() + "Martial Abilities");
 		martial.setItemMeta(martialMeta);
