@@ -1,7 +1,7 @@
 name: Naturia
 description: a plugin
 version: 1.0
-author: TheNewTao
+authors: [TheNewTao, GamerzKing]
 main: me.velocityteam.core.Main
 commands:
   ability:
