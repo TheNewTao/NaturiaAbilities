@@ -29,7 +29,7 @@ public class AbilityCmd implements CommandExecutor {
 		Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("ability")) {
 			p.playSound(p.getLocation(), Sound.LEVEL_UP, 16, 1);
-			p.openInventory(gui.openAbilitySelector());
+			p.openInventory(gui.openAbilitySelector(p));
 			return true;
 		} else if (cmd.getName().equalsIgnoreCase("select")) {
 			main.starter.put(p.getUniqueId(), false);

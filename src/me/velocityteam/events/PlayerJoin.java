@@ -89,7 +89,7 @@ public class PlayerJoin implements Listener {
 			}.runTaskLater(main, 490L);
 			new BukkitRunnable() {
 				public void run() {
-					p.openInventory(main.water.createWaterAbilities());
+					p.openInventory(main.water.createWaterAbilities(p));
 				}
 			}.runTaskLater(main, 550L);
 		}

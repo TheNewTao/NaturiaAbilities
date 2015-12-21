@@ -3,13 +3,14 @@ package me.velocityteam.menus;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class AbilitySelector {
-	public Inventory openAbilitySelector() {
-		Inventory inv = Bukkit.createInventory(null, 27,
+	public Inventory openAbilitySelector(Player p) {
+		Inventory inv = Bukkit.createInventory(p, 27,
 				ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Select your Ability Type");
 
 		ItemStack pane = new ItemStack(Material.STAINED_GLASS_PANE, 1);

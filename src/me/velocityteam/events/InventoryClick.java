@@ -33,19 +33,19 @@ public class InventoryClick implements Listener {
 			}
 			switch (e.getCurrentItem().getType()) {
 			case EYE_OF_ENDER:
-				p.openInventory(main.dark.createDarkAbilities());
+				p.openInventory(main.dark.createDarkAbilities(p));
 				break;
 			case BLAZE_POWDER:
-				p.openInventory(main.fire.createFireAbilities());
+				p.openInventory(main.fire.createFireAbilities(p));
 				break;
 			case FLINT_AND_STEEL:
-				p.openInventory(main.lighting.createLightningAbilities());
+				p.openInventory(main.lighting.createLightningAbilities(p));
 				break;
 			case WATER_BUCKET:
-				p.openInventory(main.water.createWaterAbilities());
+				p.openInventory(main.water.createWaterAbilities(p));
 				break;
 			case ARROW:
-				p.openInventory(main.martial.createMartialAbilities());
+				p.openInventory(main.martial.createMartialAbilities(p));
 				break;
 			default:
 				p.closeInventory();
@@ -60,7 +60,7 @@ public class InventoryClick implements Listener {
 			if (!main.starter.get(p.getUniqueId())) {
 
 			} else {
-				p.openInventory(main.martial.createMartialAbilities());
+				p.openInventory(main.martial.createMartialAbilities(p));
 			}
 		} else if (e.getInventory().getName()
 				.equals(ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Martial Abilities")) {
@@ -70,7 +70,7 @@ public class InventoryClick implements Listener {
 			if (!main.starter.get(p.getUniqueId())) {
 
 			} else {
-				p.openInventory(main.lighting.createLightningAbilities());
+				p.openInventory(main.lighting.createLightningAbilities(p));
 			}
 		} else if (e.getInventory().getName()
 				.equals(ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Lightning Abilities")) {
@@ -80,7 +80,7 @@ public class InventoryClick implements Listener {
 			if (!main.starter.get(p.getUniqueId())) {
 
 			} else {
-				p.openInventory(main.fire.createFireAbilities());
+				p.openInventory(main.fire.createFireAbilities(p));
 			}
 		} else if (e.getInventory().getName()
 				.equals(ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Fire Abilities")) {
@@ -90,7 +90,7 @@ public class InventoryClick implements Listener {
 			if (!main.starter.get(p.getUniqueId())) {
 
 			} else {
-				p.openInventory(main.dark.createDarkAbilities());
+				p.openInventory(main.dark.createDarkAbilities(p));
 			}
 		} else if (e.getInventory().getName()
 				.equals(ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Dark Abilities")) {

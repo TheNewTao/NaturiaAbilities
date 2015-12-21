@@ -6,12 +6,13 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class LightningMenu {
-	public Inventory createLightningAbilities() {
+	public Inventory createLightningAbilities(Player p) {
 
 		ItemStack pane = new ItemStack(Material.STAINED_GLASS_PANE, 1);
 		ItemMeta paneMeta = pane.getItemMeta();
@@ -158,7 +159,7 @@ public class LightningMenu {
 		secondDebuffs.setItemMeta(secondDebuffsMeta);
 		thirdDebuffs.setItemMeta(thirdDebuffsMeta);
 
-		Inventory inv = Bukkit.createInventory(null, 54,
+		Inventory inv = Bukkit.createInventory(p, 54,
 				ChatColor.DARK_GRAY + ChatColor.BOLD.toString() + "Lightning Abilities");
 
 		for (int x = 0; x < 54; x++) {
